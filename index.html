@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>title</title>
+  <link rel="stylesheet" href="./lib/css/main.css">
+  <script src="./Flreact.js" type="module"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module">
+    
+const element = Flreact.createElement('div', {id: 'foo'},
+      Flreact.createElement('h1', null, 'Bienvenue sur le site'),
+      Flreact.createElement('a', {href: '#'}, 'En savoir plus !'),
+      Flreact.createElement('div', {className: 'form-div'}, 
+        Flreact.createElement('form', {className: 'form', method: 'get', action: '/index.html'}, 
+          Flreact.createElement('input', {type: 'text', className: 'inputTest'}, 'Entrez votre nom:'),
+          Flreact.createElement('button', {type: 'submit', className: 'btn'}, 'submit')  
+        )
+      )
+    )
+    
+    Flreact.render(element, root)
+    // console.log(element)
+  </script>
+</body>
+</html>
