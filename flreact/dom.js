@@ -7,8 +7,7 @@
  */
 
 export function render(element, container) {
-  // console.log(element)
-  // console.log(container)
+
   const dom = 
     element.type == 'TEXT_ELEMENT'
     ? document.createTextNode(element.props.nodeValue)
@@ -16,7 +15,6 @@ export function render(element, container) {
 
     Object.keys(element.props).forEach(name => {
       if (name != 'children') {
-      // console.log(element.props[name])
         dom[name] = element.props[name]
       }
     })
